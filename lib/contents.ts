@@ -70,7 +70,7 @@ export const contents: Record<string, ProjectContent> = {
     targetUser:
       'The music listeners who wants to listen songs in a cheapest way so we offering this app that is more freemium feel to users.',
     problemStatement:
-      "a listener is a music enthusiast who's always listening music on his phone. they want a music app that can interacts with other listeners so he can enjoy to communicate and listen at the same time while using it.",
+      "Designed for the social audiophile, this user seeks a mobile music experience that combines high-quality streaming with interactive social features, enabling them to connect and communicate with fellow fans without interrupting their listening.",
     problems: [
       {
         problem: "Some music apps can't play the music they want if they aren't subscriber",
