@@ -159,17 +159,17 @@ export const contents: Record<string, ProjectContent> = {
         mockups: [
           {
             title: 'Feature 1',
-            image: '/images/muzi/feature 1.png',
+            image: '/images/muzi/feature%201.png',
             description: 'From logging in, to onboarding process and redirecting to the home page',
           },
           {
             title: 'Feature 2',
-            image: '/images/muzi/feature 2.png',
+            image: '/images/muzi/feature%202.png',
             description: 'Library page that shows all the liked songs and playlists that the user created',
           },
           {
             title: 'Feature 3',
-            image: '/images/muzi/feature 3.png',
+            image: '/images/muzi/feature%203.png',
             description: 'Other features such as Muzi Reels, Lyra AI and more',
           },
         ],
@@ -270,7 +270,7 @@ export const customPortfolioData: PortfolioPageProps = {
 
       label: 'Contact Me',
 
-      onClick: () => { window.location.href = 'mailto:alex.thompson@example.com'; },
+      onClick: () => { window.location.href = 'mailto:rustymiguelramos@gmail.com'; },
 
     },
 
@@ -281,7 +281,7 @@ export const customPortfolioData: PortfolioPageProps = {
       title: 'Muzi', 
       description: 'AI-powered music app that provides seamless and personalized music streaming experience.',
       tags: ['UI/UX Design', 'Figma', 'Case Study'],
-      imageContent: '/images/muzi_banner.png',
+      imageContent: '/images/muzi/muzi_banner.png',
       link: '/projects/muzi',
 
     },
@@ -320,27 +320,27 @@ export const customPortfolioData: PortfolioPageProps = {
   certifications: [
     {
       title: 'Start the UX Design Process: Empathize, Define, and Ideate',
-      imageContent: '/certifications/certificate 1.webp',
+      imageContent: '/certifications/certificate%201.webp',
       link: 'https://www.coursera.org/account/accomplishments/verify/BXEOIPRP60UY',
     },
     {
       title: 'Foundations of User Experience (UX) Design',
-      imageContent: '/certifications/certificate 2.jpg',
+      imageContent: '/certifications/certificate%202.JPG',
       link: 'https://www.coursera.org/account/accomplishments/verify/NJBEI3IGR7BZ'
     },
     { 
       title: 'Build Wireframes and Low-Fidelity Prototypes',
-      imageContent: '/certifications/certificate 3.jpg',
+      imageContent: '/certifications/certificate%203.JPG',
       link: 'https://www.coursera.org/account/accomplishments/verify/3RD65RSQ9FH1'
     },
     { 
        title: 'Foundations of Project Management',
-       imageContent: '/certifications/certificate 4.jpg',
+       imageContent: '/certifications/certificate%204.JPG',
        link: 'https://www.coursera.org/account/accomplishments/verify/DLHB1JEQLX34'
     },
     {
       title: 'Complete Web Designing Course | Web-Development Bootcamp',
-      imageContent: '/certifications/certificate 5.jpeg',
+      imageContent: '/certifications/certificate%205.jpeg',
       link: 'https://www.udemy.com/certificate/UC-2ea603c6-7a7c-4aa4-86fb-f95e91bded09/'
     }
 

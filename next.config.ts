@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  images: {
+    // Enable image optimization for production
+    unoptimized: false,
+    // Allow images from your domain
+    remotePatterns: [],
+  },
 };
 
 

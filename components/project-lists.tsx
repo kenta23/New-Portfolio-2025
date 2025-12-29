@@ -19,7 +19,7 @@ export default function ProjectLists({ projects }: { projects: Project[] }) {
                 <div key={project.title} className="rounded-2xl shadow-sm bg-gray-100 text-left p-6 flex flex-col">
 
                     <div className="rounded-xl h-32 w-full bg-amber-300 mb-4 flex items-center justify-center relative overflow-hidden">
-                        <Image src={project.imageContent as string || '/images/muzi_banner.png'} 
+                        <Image src={project.imageContent as string || '/images/muzi/muzi_banner.png'} 
                         className="w-full h-full object-cover object-center rounded-lg" alt={project.title} width={600} height={900}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
