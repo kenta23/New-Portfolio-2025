@@ -86,9 +86,9 @@ export default function ExperienceTimeline() {
               <div className="flex-1 flex flex-col min-w-0">
                   <h3 className="text-md lg:text-lg font-bold leading-none mb-6">Work Experience</h3>
                   {experiences.map((exp, index) => (
-                      <div key={`${exp.title}-${index}`} className="relative h-full mt-2 pl-8 pb-10 last:pb-0">
+                      <div key={`${exp.title}-${index}`} className="relative h-full pl-8 pb-10 last:pb-0">
                           {/* The Vertical Line */}
-                          <div className="absolute left-[11px] top-0 h-full w-[2px] bg-gray-400 last:hidden" />
+                          <div className="absolute left-[11px] top-0 h-full w-[2px] bg-gray-300 last:hidden" />
 
                           {/* The Bullet Point */}
                           <div className="absolute left-0 top-0 z-10 h-6 w-6 rounded-full border-2 border-primary bg-background flex items-center justify-center">
