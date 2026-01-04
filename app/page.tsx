@@ -1,4 +1,4 @@
-import MainPage from "@/components/ui/main-page";
+import MainPage from "@/components/main-page";
 
 
 

@@ -13,43 +13,57 @@ export const metadata: Metadata = {
 
 export default function ProjectLists({ projects }: { projects: Project[] }) {
     return (
-        <div id="projects" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-            {projects?.map((project: Project) => (
 
-                <div key={project.title} className="rounded-2xl shadow-sm bg-gray-100 text-left p-6 flex flex-col">
+        <div id="projects" className="w-full mx-auto">
+               <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-4 geist-font">
+                    Projects
+                </h2>
+                <p className="text-muted-foreground text-sm inter-font font-normal max-w-2xl mx-auto">
+                    My most highlighted projects
+                </p>
+            </div>
 
-                    <div className="rounded-xl h-32 w-full bg-amber-300 mb-4 flex items-center justify-center relative overflow-hidden">
-                        <Image src={project.imageContent as string || '/images/muzi/muzi_banner.png'} 
-                        className="w-full h-full object-cover object-center rounded-lg" alt={project.title} width={600} height={900}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                    </div>
 
-                    <div className="flex-1">
-                        <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">{project.title}</h3>
+        {/**PROJECTS */}
+            <div id="projects" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
 
-                        <p className="text-muted-foreground text-sm inter-font mb-4">{project.description}</p>
+                {projects?.map((project: Project) => (
 
-                        <div className="flex flex-wrap gap-2">
-                            {project.tags.map(tag => (
+                    <div key={project.title} className="rounded-2xl shadow-sm bg-gray-100 text-left p-6 flex flex-col">
 
-                                <span key={tag} className="skill-badge px-2 py-1 rounded text-xs text-muted-foreground">{tag}</span>
-
-                            ))}
+                        <div className="rounded-xl h-32 w-full bg-amber-300 mb-4 flex items-center justify-center relative overflow-hidden">
+                            <Image src={project.imageContent as string || '/images/muzi/muzi_banner.png'}
+                                className="w-full h-full object-cover object-center rounded-lg" alt={project.title} width={600} height={900}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
                         </div>
+
+                        <div className="flex-1">
+                            <h3 className="text-lg font-medium text-card-foreground mb-2 geist-font">{project.title}</h3>
+
+                            <p className="text-muted-foreground text-sm inter-font mb-4">{project.description}</p>
+
+                            <div className="flex flex-wrap gap-2">
+                                {project.tags.map(tag => (
+
+                                    <span key={tag} className="skill-badge px-2 py-1 rounded text-xs text-muted-foreground">{tag}</span>
+
+                                ))}
+                            </div>
+                        </div>
+
+
+                        <div className="flex bg-gray-100 w-fit px-3 py-2 rounded-md mt-6">
+                            <Link href={project.link as string} className="text-primary hover:text-primary-dark transition-colors inter-font text-sm">
+                                <span className="flex items-center gap-2">View Project <ArrowRightIcon className="w-4 h-4" /></span>
+                            </Link>
+                        </div>
+
                     </div>
 
-
-                 <div className="flex bg-gray-100 w-fit px-3 py-2 rounded-md mt-6">
-                    <Link href={project.link as string} className="text-primary hover:text-primary-dark transition-colors inter-font text-sm">
-                       <span className="flex items-center gap-2">View Project <ArrowRightIcon className="w-4 h-4" /></span>
-                     </Link>
-                  </div>
-
-                </div>
-
-            ))}
-
+                ))}
+            </div>
         </div>
     )
 }

@@ -25,7 +25,7 @@ const logo = {
   
   const navLinks = [
   
-    { label: 'Bio', href: '/#about' },
+    { label: 'Bio', href: '/#bio' },
   
     { label: 'Works', href: '/#projects' },
   

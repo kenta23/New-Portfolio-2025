@@ -3,13 +3,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import * as THREE from 'three';
-import ProjectLists from '../project-lists';
+import ProjectLists from './project-lists';
 import type { Project, PortfolioPageProps, Certification, Skill } from '@/types';
-import CertificationList from '../certificationlist';
-import Skills from '../skills';
+import CertificationList from './certificationlist';
+import Skills from './skills';
 import { customPortfolioData } from '@/lib/contents';
-import { Progress } from './progress';
+import { Progress } from './ui/progress';
 import { ArrowBigUpDash } from 'lucide-react';
+import ExperienceTimeline from './experience-timeline';
 
 // --- TYPE DEFINITIONS FOR PROPS ---
 
@@ -154,7 +155,7 @@ export default function MainPage () {
 
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                <div className="flex flex-row gap-4 justify-center items-center mb-16">
 
                     <button type='button' onClick={ctaButtons?.primary?.onClick || undefined} className="primary-button px-6 py-3 text-foreground rounded-lg font-medium text-sm min-w-[160px]">{ctaButtons?.primary?.label}</button>
 
@@ -162,6 +163,10 @@ export default function MainPage () {
 
                 </div>
 
+
+
+                <div className="divider mb-16" />
+                  <ExperienceTimeline />
                 <div className="divider mb-16" />
                 
                    <ProjectLists projects={projects ?? [] as Project[]} />
